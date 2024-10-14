@@ -1,12 +1,13 @@
 function main () {
-	var a b
+	var a, b
 	var c;
 	
 	a = 10;
 	b = 100;
 	
-	b = + a b;
-	c == a * b;
+	b = a + b;
+	c = a * b;
 	
-	document.writeln(c);
+	document.write(c);
+	console.log(c);
 }
