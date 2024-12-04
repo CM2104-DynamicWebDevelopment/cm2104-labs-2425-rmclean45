@@ -18,6 +18,7 @@ function getResultsFromOMDB(searchterms) {
 
 };
 
+
 function addResultTitles(jsondata){
     var htmlstring = "";
     for (var i=0; i<10; i++){
