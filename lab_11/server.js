@@ -39,7 +39,7 @@ app.get('/calc', function(req, res){
         symbol = "/";
         output = x/y;
     }
-    res.send("X " + symbol + " Y=" + output);
+    res.send("X " + symbol + " Y = " + output);
 });
 
 app.listen(8080);
