@@ -45,4 +45,8 @@ app.get('/calc', function(req, res){
     res.send("X " + symbol + " Y = " + output);
 });
 
+app.get('/about', function(req, res){
+
+});
+
 app.listen(8080);
