@@ -64,4 +64,8 @@ app.get('/user/:userID/books/:bookID', function(req, res){
     res.send("UserID: " + userID + " BookID: " + bookID);
 });
 
+app.use(function ( req, res, next) {
+    res.send('This page does not exist!');
+});
+
 app.listen(8080);
