@@ -20,4 +20,26 @@ app.get('/add', function(req, res){
     res.send("X + Y="+(x+y));
 });
 
+app.get('/calc', function(req, res){
+    var x = parseInt(req.query.x);
+    var y = parseInt(req.query.y);
+    var operator = req.query.operator;
+    var output = 0;
+    var symbol = "";
+    if (operator == "add"){
+        symbol = "+";
+        output = x+y;
+    } else if (operator == "sub"){
+        symbol = "-";
+        output = x-y;
+    } else if (operator == "mul"){
+        symbol = "x";
+        output = x*y;
+    } else if (operator == "div"){
+        symbol = "/";
+        output = x/y;
+    }
+    res.send("X " + symbol + " Y=" + output);
+});
+
 app.listen(8080);
