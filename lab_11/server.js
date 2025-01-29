@@ -61,6 +61,7 @@ app.post('/postform', function(req, res){
 app.get('/user/:userID/books/:bookid', function(req, res){
     var userID = req.params.userID;
     var bookID = req.params.bookID;
+    res.send("UserID: " + userID + " BookID: " + bookID);
 });
 
 app.listen(8080);
