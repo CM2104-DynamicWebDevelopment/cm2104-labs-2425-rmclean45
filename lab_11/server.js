@@ -58,7 +58,7 @@ app.post('/postform', function(req, res){
     res.send("Hi "+name+" I am sure you will "+quest) ;
 });
 
-app.get('/user/:userID/books/:bookid', function(req, res){
+app.get('/user/:userID/books/:bookID', function(req, res){
     var userID = req.params.userID;
     var bookID = req.params.bookID;
     res.send("UserID: " + userID + " BookID: " + bookID);
