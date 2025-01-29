@@ -14,4 +14,10 @@ app.get('/joke', function(req, res){
     res.send(randomJoke);
 });
 
+app.get('/add', function(req, res){
+    var x = req.query.x;
+    var y = req.query.y;
+    res.send("X + Y="+(x+y));
+});
+
 app.listen(8080);
