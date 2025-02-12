@@ -54,6 +54,16 @@ app.post('/quotes', function (req, res) {
     });
   });
 
+  app.post('/delete', function(req, res) {
+    db.collection('quotes').deleteOne(req.body, function(err, result) {
+      if (err) throw err;
+      console.log('deleted from database')
+      console.log(req.body);
+      res.redirect('/');
+    });
+  });
+  
+
 
 //run the connect method.
 connectDB();
