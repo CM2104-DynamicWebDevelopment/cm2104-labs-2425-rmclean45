@@ -42,7 +42,7 @@ app.post('/quotes', function (req, res) {
       if (err) throw err;
         
       var output = "<h1>All the quotes</h1>";
-      console.log(req.body);
+      console.log("json: " + req.body);
   
       for (var i = 0; i < result.length; i++) {
         output += "<div>"
