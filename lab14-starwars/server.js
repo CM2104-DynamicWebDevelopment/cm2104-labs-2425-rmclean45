@@ -62,13 +62,8 @@ app.get('/add', function(req,res) {
 app.get('/delete', function(req,res) {
   res.render('pages/delete');
 });
-app.post('/filter', function(req,res) {
-  db.collection('quotes').find(req.body).toArray(function(err, result) {
-    if (err) throw err;
-    console.log(req.body);
-    res.render('pages/filter', {quotes:result});
-  });
-  
+app.get('/filter', function(req,res) {
+  res.render('pages/filter')  
 });
 app.get('/update', function(req,res) {
   res.render('pages/update');
@@ -102,16 +97,8 @@ app.post('/quotes', function (req, res) {
 app.post('/search', function(req, res) {
   db.collection('quotes').find(req.body).toArray(function(err, result) {
     if (err) throw err;
-
-    var output = "<h1>quotes by" +req.body.name+ "</h1>";
-
-    for (var i = 0; i < result.length; i++) {
-      output += "<div>"
-      output += "<h3>" + result[i].name + "</h3>"
-      output += "<p>" + result[i].quote + "</p>"
-      output += "</div>"
-    }
-    res.send(output);
+    console.log(req.body);
+    res.render('pages/filter', {quotes:result});
   });
 });
 
