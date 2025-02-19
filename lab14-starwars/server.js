@@ -98,7 +98,7 @@ app.post('/search', function(req, res) {
   db.collection('quotes').find(req.body).toArray(function(err, result) {
     if (err) throw err;
     console.log(req.body);
-    res.render('pages/filter', {quotes:result});
+    res.render('pages/index', {quotes:result});
   });
 });
 
