@@ -18,7 +18,16 @@
         <button type="submit">Submit</button>
       </form>
     </div>
+    <div><% quotes.forEach(function(quote) { %>
+      <li>
+          <%= quote.name %> - <%= quote.quote %>
+      </li>
+      <% }); %>
+    </div>
+
   </main>
+
+
 </body>
 
 <footer>
