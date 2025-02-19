@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Update Quotes Form</title>
+  <%- include('../partials/head') %>
+</head>
+
+<body class="container">
+  <header>
+    <%- include('../partials/header') %>
+  </header>
+  <main>
+    <div class="jumbotron">
+      <h1>Update a quote</h1>
+      <form action="/update" method="POST">
+        <input type="text" placeholder="quote" name="quote">
+        <input type="text" placeholder="new name" name="newname">
+        <input type="text" placeholder="new quote" name="newquote">
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </main>
+</body>
+
+<footer>
+  <%- include('../partials/footer') %>
+</footer>
+
+</html>
