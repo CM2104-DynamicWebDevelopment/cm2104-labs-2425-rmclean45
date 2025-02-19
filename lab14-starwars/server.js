@@ -52,15 +52,6 @@ async function connectDB() {
 app.get('/', function(req,res) {
   db.collection('quotes').find().toArray(function(err, result) {
     if (err) throw err;
-
-    /*var output = "<h1>All the quotes</h1>";
-
-    for (var i = 0; i < result.length; i++) {
-        output += "<div>";
-        output += "<h3>" + result[i].name + "</h3>";
-        output += "<p>" + result[i].quote + "</p>";
-        output += "</div>";
-    }*/
     res.render('pages/index', {quotes:result});
 });
   
@@ -71,8 +62,13 @@ app.get('/add', function(req,res) {
 app.get('/delete', function(req,res) {
   res.render('pages/delete');
 });
-app.get('/filter', function(req,res) {
-  res.render('pages/filter');
+app.post('/filter', function(req,res) {
+  db.collection('quotes').find(req.body).toArray(function(err, result) {
+    if (err) throw err;
+    console.log(req.body);
+    res.render('pages/filter', {quotes:result});
+  });
+  
 });
 app.get('/update', function(req,res) {
   res.render('pages/update');
