@@ -1,11 +1,3 @@
-/**
- * @Author: John Isaacs <john>
- * @Date:   01-Mar-19
- * @Filename: server.js
- * @Last modified by:   john
- * @Last modified time: 03-Mar-2024
- */
-
 //code to link to mongo module
 const MongoClient = require('mongodb-legacy').MongoClient; //npm install mongodb-legacy
 const url = 'mongodb://127.0.0.1:27017'; // the url of our database
@@ -57,15 +49,22 @@ app.get('/', function(req, res) {
   //if the user is not logged in redirect them to the login page
   if(!req.session.loggedin){res.redirect('/login');return;}
 
+  var currentuser = req.session.currentuser;
+
+
   //otherwise perfrom a search to return all the documents in the people collection
-  db.collection('people').find().toArray(function(err, result) {
+  db.collection('people').find().toArray(function (err, result) {
     if (err) throw err;
     //the result of the query is sent to the users page as the "users" array
-    res.render('pages/users', {
-      users: result
-    })
-  });
+    db.collection('people').findOne({"login.username": currentuser}, function (err, userresult) {
+      if (err) throw err;
 
+      res.render('pages/users', {
+        users: result,
+        user: userresult
+      })
+    });
+  });
 });
 
 //this is our login route, all it does is render the login.ejs page.
@@ -133,9 +132,10 @@ app.post('/dologin', function(req, res) {
 
 
 
-    if(result.login.password == pword){ req.session.loggedin = true; res.redirect('/') }
-
-
+    if(result.login.password == pword){
+      req.session.loggedin = true;
+      req.session.currentuser  = uname
+      res.redirect('/') }
 
     else{res.redirect('/login')}
   });
