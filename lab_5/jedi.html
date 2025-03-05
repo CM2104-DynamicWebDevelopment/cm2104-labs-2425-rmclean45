@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jedi</title>
+</head>
+<body>
+    <p id="skittles">Skittles</p>
+    <p>Fear</p>
+    <p>Anger</p>
+
+    <script>
+        /*let paragraphs = document.getElementsByTagName("p");
+        document.body.insertBefore(paragraphs[2],paragraphs[0]);
+
+        console.log(paragraphs.length);
+
+        let test = "cat";
+
+        for (let index = 0; index < paragraphs.length; index++) {
+            console.log(index)
+            let header = index+1;
+            paragraphs[index].innerHTML = "<h"+header+">paragraph "+ test + "</h"+header+">";
+        }
+        let newPara = document.createElement("p");
+        let text = document.createTextNode("A jedi craves not these things");
+        newPara.appendChild(text);
+        document.body.appendChild(newPara);*/
+        let newText = document.createElement("p");
+        let newTextNode = document.createTextNode("aggression");
+        document.body.replaceChild(newTextNode, document.getRootNode())
+    </script>
+</body>
+</html>
