@@ -41,3 +41,6 @@ body {
 #messages>li:nth-child(odd) {
     background: #efefef;
 }
+.pm {
+    background: #ffaaaa !important;
+}
