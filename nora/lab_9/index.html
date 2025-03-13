@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--default stuff-->
+        <meta charset="utf8">
+        <title>Leaflet Earthquake</title>
+        <!--my style sheets-->
+        <link rel="stylesheet" href="main.css">
+        <!--Leaflet Stylesheet-->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+
+        <!--Leaflet Script-->
+        <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+        <!-- more scripts at the end-->
+    </head>
+    <body>
+        <section class="main-container">
+            <article>
+                <!--my map-->
+                <div id="mapid"></div>
+            </article>
+
+            <aside>
+                <p>Red circles are earthquakes</p>
+                <p>Blue circles are meteor strikes</p>
+                <button id="shakey">Load Earthquakes</button>
+                <button id="dopey">Load Meteors</button>
+            </aside>
+        </section>
+        <!--#main-container-->
+        <!--jquery and main scripts-->
+        <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+        <script src="main.js"></script>
+    </body>
+</html>

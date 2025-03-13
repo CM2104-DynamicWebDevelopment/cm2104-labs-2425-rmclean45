@@ -1,0 +1,34 @@
+body{
+    margin:0px;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td{
+    text-align: center;
+}
+
+th,td{
+    border: 1px solid black;
+}
+
+tr:hover{
+    background-color: grey;
+}
+
+thead{
+    background-color: blue;
+    color: white;
+}
+tbody{
+    background-color: lightcyan;
+}
+.zebra{
+    background-color: aqua;
+}
+
+
+
