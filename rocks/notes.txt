@@ -1,0 +1,9 @@
+
+
+COLOURS:
+    black -     #2B2D42
+    yellow -    #f7e733
+    gold -      #f7c633
+    pink -      #E86A92
+    blue -      #A3C3D9
+    Lblue -     #CCD6EB

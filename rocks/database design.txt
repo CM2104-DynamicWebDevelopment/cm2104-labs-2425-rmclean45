@@ -1,0 +1,13 @@
+database for site
+
+user: 
+username
+password
+email
+photo
+
+meals:
+mealname
+calorie
+all macros
+date

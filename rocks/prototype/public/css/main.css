@@ -1,0 +1,1303 @@
+
+/*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+.header{
+    background-color: #f7e733;
+    padding: 2%;
+}
+
+#title{
+    text-align: center;
+    text-decoration: solid;
+    font-size: 100px;
+    padding-top: 7%;
+    padding-left: auto;
+    padding-right: auto;
+}
+
+
+
+
+/* ================================================== Navigation Bar ================================================== */
+
+#nav-bar {
+
+    background-color: #f7e733;
+
+    outline-style: solid;
+    outline-color: #f7c633; /* change colour for your liking */
+    outline-width: 10px;
+
+    padding: 5px;
+    padding-left: 2%;
+
+    top: 0rem;
+    align-self: flex-start;
+    position: sticky;
+    z-index: 3;
+
+}
+
+
+
+
+
+
+/* ================================================= Banner Buttons ============================================== */
+
+.polygon-button{
+    background-color: #e86a92;
+    position:absolute; 
+    text-align: center;
+    top:0; 
+    right: 80px;
+    float:right;
+    height: 190px;
+    line-height: 37px;
+    width: 100px;
+    clip-path: polygon(0 70%, 0 0, 100% 0, 100% 70%, 50% 96%);
+
+}
+
+.polygon-button-outline{
+    background-color: #f7c633; /* change colour for your liking */
+    position:absolute; 
+    text-align: center;
+    top:0; 
+    right: 70px;
+    float:right;
+    height: 200px;
+    line-height: 37px;
+    width: 120px;
+    clip-path: polygon(0 70%, 0 0, 100% 0, 100% 70%, 50% 100%);
+
+    top: 0rem;
+    align-self: flex-start;
+    position: fixed;
+    z-index: 3;
+}
+
+.polygon-button:hover{
+    cursor: pointer;
+}
+
+#profileicon{
+    padding-top: 30%;
+    width: 50px;
+}
+
+.Login-Slide{
+    padding:20px;
+    top:0px;
+    height: 570px;
+    width: 200px;
+    right:80px;
+    position:absolute;
+    background: #e86a92;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    display: none;
+
+    outline:#f7c633;
+    outline-width: 10px;
+    outline-style: solid;
+
+}
+
+
+.login-button{
+    background-color: #e86a92;
+    color: #CCD6EB;
+    font-weight: bolder;
+    border: none;
+    padding: 20px 20px;
+    text-align: center;
+    display: flexbox;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 100px;
+}
+
+
+/* ================================================== Search Bar ================================================== */
+#search-bar {
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    
+
+    display: block;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    margin-bottom: 500px;
+    
+}
+#search {
+
+    width: 80%;
+    height: auto;
+    cursor: pointer;
+
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    outline: none;
+
+    text-align: left;
+    font-size: 40px;
+
+    overflow: none;
+
+}
+
+
+/* ================================================= Modules ============================================== */
+
+.devider{
+    background-color: #e86a92;
+    padding: 50px;
+    display:none;
+}
+
+.container{
+    display:none;
+    background-color: #ffffff;
+    height:auto;
+    opacity: 100%;
+    padding: 100px;
+    padding-left: 150px;
+    padding-top: 10px;
+    border-width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.ContainerHeader{
+    font-size: 100px;
+    justify-self: left;
+}
+
+/* for first area */
+
+.itemImage{
+    width: 40%;
+    height: 40%;
+    object-fit: scale-down;
+    float: right;
+    z-index: 2;
+}
+
+.yes-no{
+    width: auto;
+    height: 300px;
+    margin-left: -100px;
+}
+
+.edible{
+    font-size: 200%;
+    margin-top: 300px;
+    margin-bottom: -20px;
+}
+
+.warning-text{
+    font-size: 80%;
+    margin-top: 10px;
+    color: #868686;
+    margin-top: -70px;
+    margin-bottom: -70px;
+}
+
+/* for info area */
+
+.inner-container{
+    padding-left: 10px;
+    padding-top: 10px;
+    width: 30%;
+
+    vertical-align: top;
+}
+#ContainerIngredient{
+    display:none;
+}
+
+
+.dropdownArrow{
+    transform: scale(-1, -1);
+}
+
+.ingredientsList{
+    position: relative;
+    display: none;
+
+}
+.ingredientsList.active{
+    display: block;
+    font-size: 200%;
+}
+.centered-container{
+
+    margin-top: 10%;
+    display: block;
+    font-size: 150%;
+    text-align: center;
+
+}
+/* ================================================= Button Module ============================================== */
+
+.containerButtons{
+    background-color: #e86a92;
+    height: 300px;
+    opacity: 100%;
+
+    padding-left: 10%;
+    padding-right: 10%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    display:none;
+}
+    
+    
+.moduleButton{
+    height: 300px;
+    width: 30%;
+    margin: auto;
+ 
+    border-radius: 10%;
+    background-color: #f7e733;
+    font-size: 150%;
+    font-weight: bold;
+
+    border-width: 5px;
+    border-color: #ffffff;
+
+}
+
+.moduleButton:hover{
+    background-color: #CCD6EB;
+}
+
+
+
+/* ================================================= Tracker PopUp ============================================== */
+
+
+
+.trackerPopup{
+    font-size: 150%;
+}
+
+.trackerPopup h2{
+    text-align: center;
+    color: #f7e733
+}
+
+.trackerPopup .macroName, .trackerSubheader{
+    display:inline-block;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.trackerPopup button{
+    width:100%;
+    height:70px;
+    border:none;
+    outline: none;
+    font-size:20px;
+    background:#f7e733 ;
+    transition: background .1s ease-in;
+    border-radius: 60px;
+    margin:auto;
+    cursor:pointer;
+    font-weight: bold;
+    color: black; 
+}
+.trackerPopup button:hover{
+    background:#ffffff ;
+}
+
+#gramsInput{
+    display:inline-block;
+    outline: none;
+    border: none;
+    border-bottom:4px solid #f7c633;
+    background-color: #E86A92;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.trackerSubheader{
+    color: #f7e733;
+
+}
+.macroName{
+    display: inline;
+    font-size: 100% ;
+    font-weight: bold;
+    color: #f7e733;
+}
+.macroValue{
+    display: inline;
+    font-style: oblique;
+    font-size: 100% ;
+    color: #ffffff;
+}
+
+
+
+/* ================================================= New Meal PopUp ============================================== */
+
+
+.newMealHeader {
+    font-size: 200%;
+    color: #f7e733;
+    display: block;
+    text-align: center;
+    margin-bottom: 10%;
+}
+
+.newMealSubHeader {
+    font-size: 125%;
+    color: #f7e733;
+    display: block;
+}
+
+.newIngredient {
+    display:inline-block;
+    margin-left: 2%;
+    outline: none;
+    border: none;
+    border-bottom:4px solid #f7c633;
+    background-color: #E86A92;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.newIngredientGrams {
+    display:inline-block;
+    outline: none;
+    border: none;
+    border-bottom:4px solid #f7c633;
+    background-color: #E86A92;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+
+#newMealName {
+    display:inline-block;
+    margin-left: 2%;
+    outline: none;
+    border: none;
+    border-bottom:4px solid #f7c633;
+    background-color: #E86A92;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* ================================================= Login ============================================== */
+
+.containerlogin{
+    background-color: #ffffff;
+    height:1000px;
+    opacity: 100%;
+    padding:100px;
+    padding-top: 10px;
+    border-width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.ContainerLoginHeader{
+    font-size: 100px;
+    justify-self: left;
+}
+#input-bar {
+    margin-top: 2%;
+    width: 60%;
+    display: block;
+}
+#input {
+
+    width: 50%;
+    height: auto;
+    cursor: pointer;
+
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    outline: none;
+
+    text-align: left;
+    font-size: 20px;
+    overflow: none;
+    margin: 2%;
+}
+
+#createButton{
+
+    width: 300px;
+    height: 100px;
+    border: #e86a92 solid;
+    background-color: #e86a92;
+    font-size: 20px;
+    color: #ffffff;
+    border-radius: 100px;
+    margin:5px;
+    
+}
+#createButton:hover{
+    background-color: #ffffff;
+    color: black;
+    transition: all .1s ease-in;
+}
+
+
+/* ================================================= Login/Signup PopUp ============================================== */
+
+/* popup function */
+.popup{
+    position: fixed;
+    top:-150%;
+    left:50%;
+    opacity:0;
+    transform: translate(-50%,-50%);
+    width: 500px;
+    height: 700px;
+    padding:20px 30px;
+    background:#E86A92;
+    outline: #f7c633;
+    outline-style: solid;
+    outline-width: 10px;
+    transition: top 600ms ease-in-out 10ms,
+                opacity 250ms ease-in-out 10ms,
+                trasnform 500ms ease-in-out 0ms;
+}
+.popup.active{
+    position: fixed;
+    z-index: 4;
+    top:50%;
+    opacity:1;
+    transform: translate(-50%,-50%);
+    transition: top 600ms ease-in-out 30ms,
+                opacity 250ms ease-in-out 10ms,
+                trasnform 500ms ease-in-out 0ms;
+}
+.popup .close-btn{
+    position: absolute;
+    top:10px;
+    right:10px;
+    width:35px;
+    height:35px;
+    color: white;
+    text-align: center;
+    font-size:40px;
+    line-height: 35px;
+    border-radius: 35px;
+    cursor:pointer;
+
+}
+
+/* title text */
+.popup .form h2{
+    text-align: center;
+    margin: 10px 0px 20px;
+    font-size:30px;
+    color: #CCD6EB;
+}
+/* section text */
+.popup .form .form-element label{
+    font-size: 16px;
+    color:#CCD6EB;
+
+}
+
+/* spacing */
+.popup .form .form-element{
+    margin:30px 30px;
+}
+
+/* inputs */
+
+.popup .form .form-element input[type="number"]{
+    outline: none;
+    border: none;
+    border-bottom:4px solid #f7c633;
+    background-color: #E86A92;
+    font-weight: bold;
+    color: #ffffff;
+
+}
+
+.popup .form .form-element input[type="text"],
+.popup .form .form-element[type="password"] {
+    margin-top:5px;
+    display: block;
+    width: 90%;
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-bottom:4px solid #f7c633;
+    margin: auto;
+    background-color: #E86A92;
+    font-weight: bold;
+    color: #ffffff;
+    
+}
+.popup ::placeholder{
+    color: #f7c633;
+    opacity: 50%;
+}
+/* checkbox */
+.popup .form .form-element input[type="checkbox"]{
+    -webkit-appearance: none;
+    appearance: none;
+    background-color:#ffffff;
+    border:4px solid #f7c633;
+    margin-left: 5px;
+    left: 5px;
+    top: -2px;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    align-self: center;
+    display: inline-grid;
+    place-content: center;
+
+}
+/* once checked */
+input[type="checkbox"]::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out 20ms;
+    background-color: #E86A92;
+} 
+input[type="checkbox"]:checked::before {
+    transform: scale(1);
+}
+
+/* buttons */
+.popup .form .form-element button{
+    width:100%;
+    height:70px;
+    border:none;
+    outline: none;
+    font-size:20px;
+    background:#f7e733 ;
+    transition: background .1s ease-in;
+    border-radius: 60px;
+    margin:auto;
+    cursor:pointer;
+    font-weight: bold;
+    color: black; 
+}
+.popup .form .form-element button:hover{
+    background:#ffffff ;
+
+}
+.popup .form .form-element a{
+    display:block;
+    text-align:right;
+    font-size:15px;
+    color:#1a79ca;
+    text-decoration:none;
+    font-weight:600;
+
+}
+
+#profilepic{
+    width:70%;
+}
+
+/*---------------Macros CSS---------------------------------------*/
+
+
+
+.Macros p {
+
+    text-align: left;
+    font-size: 150%;
+    margin-left: 7%;
+
+}
+
+.ContainerHeaderExtras{
+    font-size: 200%;
+    justify-self: left;
+    margin-left: 4%;
+}
+
+.contentAfterSearch{
+
+   opacity:1;
+
+
+}
+.contentAfterSearch.active{
+    opacity:1;
+}
+
+.ContainerHeaderInfo {
+    font-size: 500%;
+}
+
+.indentIng{
+    margin-left:20px;
+    
+}
+
+
+/*-----------------CHANGE DESIGN FOR CALORIE TRACKER I DONT KNOW HOW IT SHOULD LOOK------------------*/
+
+/*------------------------------Tracker CSS--------------------*/
+
+#titleMacro{
+    text-align: center;
+    text-decoration: solid;
+    font-size: 100px;
+    padding-top: 4%;
+    padding-left: auto;
+    padding-right: auto;
+}
+
+
+#search-Tracker {
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+
+
+    display: block;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    margin-bottom: 200px;
+
+}
+#food {
+
+    width: 80%;
+    height: auto;
+    cursor: pointer;
+
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    outline: none;
+
+    text-align: left;
+    font-size: 40px;
+
+    overflow: none;
+
+}
+
+.tracker{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.TrackerMacroResult{
+    width: 100%;
+    float: left;
+    border-right: #f7e733 solid 10px;
+
+}
+
+
+.buttonL{
+    text-align: center;
+
+
+}
+#logFood{
+    cursor: pointer;
+}
+#logFood{
+    margin-bottom: 2%;
+    width:40%;
+    font-size: 180%;
+    color: #ffffff;
+    background: #e86a92;
+    border-radius: 50px;
+    border: 0px;
+    padding: 20px;
+
+}
+
+.divMacroLoged{
+    text-align: center;
+    border-left: #E86A92 solid 10px;
+    width: 100%;
+    float: left;
+
+}
+
+
+.reamingText{
+    font-size: 200%;
+
+}
+.actualcallorie{
+    font-size: 150%;
+}
+
+#SearchName{
+    text-decoration: underline #f7e733;
+}
+
+#goalText{
+    text-decoration: underline #E86A92;
+}
+
+#grams{
+    width: 150px;
+    height: auto;
+    cursor: pointer;
+
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    outline: none;
+
+    text-align: left;
+    font-size: 40px;
+
+    overflow: none;
+}
+#gramUnit{
+    font-size: 40px;
+}
+
+.rocky{
+    position: fixed;
+    top: 80%; 
+    left: 87%;
+    z-index: 1;
+    width: 10%;
+}
+
+/*login verify popup - pretty much copy paste from the original popup styles but with some changes*/
+.verifyPopup{
+    position: fixed;
+    top:-150%;
+    left:50%;
+    opacity:0;
+    transform: translate(-50%,-50%);
+    width: 500px;
+    height: 250px;
+    padding:20px 30px;
+    background:#E86A92;
+    outline: #f7c633;
+    outline-style: solid;
+    outline-width: 10px;
+    transition: top 600ms ease-in-out 10ms,
+                opacity 250ms ease-in-out 10ms,
+                trasnform 500ms ease-in-out 0ms;
+}
+.verifyPopup.active{
+    position: fixed;
+    z-index: 4;
+    top:50%;
+    opacity:1;
+    transform: translate(-50%,-50%);
+    transition: top 600ms ease-in-out 30ms,
+                opacity 250ms ease-in-out 10ms,
+                trasnform 500ms ease-in-out 0ms;
+}
+.verifyPopup .close-btn{
+    position: absolute;
+    top:10px;
+    right:10px;
+    width:35px;
+    height:35px;
+    color: white;
+    text-align: center;
+    font-size:40px;
+    line-height: 35px;
+    border-radius: 35px;
+    cursor:pointer;
+
+}
+
+/* title text */
+.verifyPopup .form h2{
+    text-align: center;
+    margin: 10px 0px 20px;
+    font-size:30px;
+    color: #CCD6EB;
+}
+/* section text */
+.verifyPopup .form .form-element label{
+    font-size: 16px;
+    color:#CCD6EB;
+
+}
+
+/* spacing */
+.verifyPopup .form .form-element{
+    margin:30px 30px;
+}
+
+
+/* buttons */
+.verifyPopup .form .form-element button{
+    width:100%;
+    height:70px;
+    border:none;
+    outline: none;
+    font-size:20px;
+    background:#f7e733 ;
+    transition: background .1s ease-in;
+    border-radius: 60px;
+    margin:auto;
+    cursor:pointer;
+    font-weight: bold;
+    color: black; 
+}
+.verifyPopup .form .form-element button:hover{
+    background:#ffffff ;
+}
+
+.verifyPopup p{
+    color: #ffffff;
+    font-size: 15px;
+    text-align: center;
+}
+
+/*--------------contact us boxes--------------*/
+
+.contactusform{
+    display:block;
+    margin-left: 2%;
+
+}
+.contactusform input{
+    width: 30%;
+    border: #ffffff;
+    border-bottom: #E86A92 2px solid; 
+    margin: 1%;
+}
+
+.contactusform #inputBox{
+    width: 40%;
+    height: 30%;
+    border: #E86A92 solid;
+    border-radius: 20px;
+    margin: 1%;
+    padding: 1%;
+}
+.containerContactUs{
+    background-color: #ffffff;
+    opacity: 100%;
+    padding:70px;
+    padding-top: 10px;
+}
+.containerContactUs h1{
+    font-size: 70px;
+}
+
+/*-------------speech bubble---------------*/
+
+.speechbubblecontainer{
+    opacity:0;
+}
+.speechbubblecontainer.active{
+    opacity:1;
+}
+.speechbubble{
+    position: fixed;
+    opacity: 1;
+    margin-left: 65%;
+    margin-top: 30%;
+    font-size: 20px;
+    border-radius: 40px;
+    width: 20%;
+    height: 10%;
+    background-color: #E86A92;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 1%;
+    opacity: 1;
+    
+}
+.speechbubblearrow{
+    background-color: #E86A92;
+    position: fixed;
+    margin-left: 80%;
+    margin-top: 35%;
+    width: 3%;
+    aspect-ratio: 1/1;   
+    clip-path: polygon(100% 100%, 0 0, 100% 0);
+    opacity: 1;
+}
+
+.speechbubblecontainercal{
+    opacity:0;
+}
+.speechbubblecal{
+    position: fixed;
+    opacity: 1;
+    margin-left: 70%;
+    margin-top: 26%;
+    font-size: 20px;
+    width: 15%;
+    aspect-ratio: 1/1;
+}
+.speechbubblearrowcal{
+    background-color: #f7e733;
+    position: fixed;
+    margin-left: 80%;
+    margin-top: 35%;
+    width: 3%;
+    aspect-ratio: 1/1;   
+    clip-path: polygon(100% 100%, 0 50%, 50% 0);
+    opacity: 1;
+}
+.speechbubblecontainercal.active{
+    opacity:1;
+}
+
+
+
+
+
+/* ================================================= Goals ============================================== */
+
+.goals-title{
+    font-size: 400%;
+    margin-left: 5%;
+
+}
+.goals-header {
+
+    font-size: 300%;
+
+}
+
+.goals-section {
+
+    display: flex;
+    vertical-align: top;
+    margin: 10%;
+    margin-top: 0;
+
+}
+
+.goals-module {
+
+    display: inline-block;
+    vertical-align: top;
+
+    margin: auto;
+    padding: 2%;
+
+    width: 25%;
+    aspect-ratio: 1/1;
+
+
+    background-color: #ffffff;
+}
+
+.cal-circle {
+    border-radius: 50%;
+    height: 80%;
+    width: 80%;
+    margin: 0 auto;
+    background-color: #f7e733;
+    border: 4px solid #f7c633;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    margin: 10%;
+    margin-top: 0;
+    margin-bottom: 20%;
+}
+
+.weight-image{
+    width: 30%;
+    margin-left: 35%;
+    margin-right: auto;
+}
+
+.weight-text{
+    font-size: 700%;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 0;
+    
+}
+
+.goals-macro-text{
+    float: left;
+    margin-left: 50px;
+    font-size: 150%;
+}
+
+.red-text {
+    display: block;
+    font-size: 40px;
+    text-align: center;
+    color: #e86a92;
+    margin: 0;
+}
+
+.weight-update {
+
+    margin: auto;
+    width: 50%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 25%;
+    
+    background-color: #f7e733;
+    font-size: 150%;
+    font-weight: bold;
+
+    border-width: 5px;
+    border-color: #ffffff;
+
+}
+
+/* ================================================= Meals ============================================== */
+/* meals reuses some of the goals things */
+
+.meals-center-text{
+
+    font-size: 300%;
+    text-align: center;
+}
+
+.myMealsDatabase{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 150%;
+    background-color: #f7e733;
+}
+.myMealsDatabase *{
+    padding: 1%;
+    border: #ffffff solid;
+}
+
+.myMealsDatabase tr:nth-child(odd) {
+    background-color: #E86A92;
+    color: #ffffff;
+}
+.myMealsDatabase th:nth-child(3) {
+    width: 10%;
+}
+
+.addButton{
+    background: #CCD6EB;
+    padding: 5px;
+    width: 100px;
+    border: #CCD6EB;
+    border-radius: 20px;
+    color: #CCD6EB;
+    font-weight: bold;
+}
+.addButton:hover{
+    background: #ffffff;
+    padding: 5px;
+    width: 100px;
+    border: #CCD6EB;
+    border-radius: 20px;
+    color: #E86A92;
+    font-weight: bold;
+}
+
+.trackerButton{
+    background: #E86A92;
+    padding: 5px;
+    width: 100px;
+    border-radius: 20px;
+    border: #E86A92;
+    color: #ffffff;
+    font-weight: bold; 
+}
+.trackerButton:hover{
+    background: #ffffff;
+    padding: 5px;
+    width: 100px;
+    border: #e86a92;
+    border-radius: 20px;
+    color: #E86A92;
+    font-weight: bold;
+}
+
+.mealButton{
+    background: #e86a92;
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 20px;
+    border: #e86a92;
+    color: #ffffff;
+    font-weight: bold; 
+}
+.mealButton:hover{
+    background: #ffffff;
+    padding: 5px;
+    border: #e86a92;
+    border-radius: 20px;
+    color: #E86A92;
+    font-weight: bold;
+}
+
+
+
+.rightContainer{
+    width: 10%;
+    position: absolute;
+}
+
+/* ================================================= chat ============================================== */
+
+
+.chat-container {
+   
+
+    width: 100%;
+    max-width: 800px;
+    height: 80vh;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+
+  .chat-header {
+
+
+    background-color: #e86a92;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .chat-messages {
+  
+
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #fff;
+  }
+  
+  .message {
+
+
+    margin-bottom: 15px;
+    max-width: 80%;
+    padding: 10px 15px;
+    border-radius: 18px;
+    line-height: 1.4;
+  }
+  
+  .user-message {
+ 
+
+    background-color: #f7e733;
+    align-self: flex-end;
+    margin-left: auto;
+    border-bottom-right-radius: 5px;
+  }
+  
+  .ai-message {
+ 
+
+    background-color: #e86a92;
+    color: white;
+    align-self: flex-start;
+    border-bottom-left-radius: 5px;
+  }
+  
+  #message-container {
+ 
+
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #chat-input {
+ 
+    display: flex;
+    padding: 15px;
+    background-color: #f8f8f8;
+    border-top: 1px solid #eee;
+  }
+  
+  #chat-input input {
+  
+
+    flex: 1;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    outline: none;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1) inset;
+  }
+  
+  #chat-input button {
+  
+
+    margin-left: 10px;
+    padding: 0 20px;
+    background-color: #e86a92;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  #chat-input button:hover {
+
+    background-color: #d55a82;
+  }
+  
+  .timestamp {
+    
+
+    font-size: 0.7rem;
+    margin-top: 5px;
+    opacity: 0.7;
+    align-self: flex-end;
+  }
