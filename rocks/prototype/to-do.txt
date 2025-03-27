@@ -1,0 +1,7 @@
+
+- setup registering
+- get login working
+- create page to show each tracked item
+- create new meal button
+- popup for each meal added to track (reuse tracker popup)
+- error page
