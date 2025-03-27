@@ -156,7 +156,7 @@ $("#SendSecurity").on("click", function(){
 })
 
 //Buttons on the Site
-$("button").on("click",function (){
+/*$("button").on("click",function (){
     console.log("A button was clicked")
     let idButton=$(this).attr('id');
     console.log(idButton);
@@ -207,6 +207,7 @@ $("button").on("click",function (){
 
 
 })
+    */
 
 
 
