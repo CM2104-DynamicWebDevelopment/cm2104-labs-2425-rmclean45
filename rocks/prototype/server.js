@@ -15,6 +15,7 @@ var app = express();
 //express sesion
 
 app.use(bodyParser.json());
+app.use(express.urlencoded({extended:true}))
 
 
 app.use(session({ 
@@ -24,7 +25,7 @@ app.use(session({
 
 }));
 
-app.use(express.urlencoded({extended:true}))
+
 
 app.use(express.static('public'))
 //to spceify css because it didnt want to go to public folder
