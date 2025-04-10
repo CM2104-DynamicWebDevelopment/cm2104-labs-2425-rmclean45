@@ -7,8 +7,6 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
-//ross is here
-
 // MongoDB setup
 const url = 'mongodb://127.0.0.1:27017';
 const client = new MongoClient(url);
@@ -134,7 +132,6 @@ app.post('/dologin', (req, res) => {
 
     // Redirect user to their profile
     res.redirect('/profile');
-
   });
 });
 
@@ -228,30 +225,8 @@ app.post('/passwordChange', async (req, res) => {
   }
 })
 
-//updating highscore
-app.post('/newScore', async (req,res) =>{
-  const username = req.session.currentuser;
-  const { currentScore, newScore} = req.body;
-
-  if (newScore>currentScore) {
-    //update the highscore
-    await db.collection('people').updateOne(
-      {"login.username":username},
-      {$set: {"highscore":newScore}}
-    );
-    console.log("You bet your highscore, well done");
-  } else {
-    console.log("You didn't beat your highscore");
-  }
-  return res.redirect('/games');
-})
-
 // adding image to gallery POST request
 app.post('/addimage', async (req, res) => {
-  if (!req.session.loggedin) {
-    return res.redirect('/login');
-  }
-
   const { imageUrl, title, description } = req.body;
   const username = req.session.currentuser;
 
@@ -284,7 +259,6 @@ app.post('/addimage', async (req, res) => {
 
   res.redirect('/gallery');  // Redirect to the gallery page
 });
-
 
 app.get('/gallery', async (req, res) => {
   if (!req.session.loggedin) {
