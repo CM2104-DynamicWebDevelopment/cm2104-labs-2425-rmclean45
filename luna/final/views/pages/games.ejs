@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <%- include('../partials/head')%>
+        <script src="js/game.js" defer></script>
+
+    </head>
+    <body>
+        <div class="header-container">
+            <header class="wrapper clearfix">
+                <h1 class="title">LUNA GAMES</h1>
+                <%- include('../partials/header')%>
+            </header>
+        </div>
+
+        <!-- Game Section -->
+        <div id="game">
+            <link href="https://fonts.googleapis.com/css?family=Play:400,700" rel="stylesheet" type="text/css">
+            <canvas id="game-canvas" width="640" height="640"></canvas>
+        </div>
+
+        <div class="footer-container">
+            <footer class="wrapper">
+                <%- include('../partials/footer')%>
+            </footer>
+        </div>
+
+        <br>
+    
+        <script src="js/main.js"></script>
+    </body>
+</html>

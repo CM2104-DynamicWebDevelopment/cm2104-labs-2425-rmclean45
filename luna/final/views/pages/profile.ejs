@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<header>
+    <%- include('../partials/head')%>
+</header>
+
+<body>
+    <div class="header-container">
+        <header class="wrapper clearfix">
+            <h1 class="title">LUNA PROFILE</h1>
+            <%- include('../partials/header')%>
+        </header>
+    </div>
+
+    <main>
+        <div class="profile-container">
+            <h2>Welcome, <%= user.login.username %>!</h2>
+
+            <div class="profile-details">
+                <p><strong>Username:</strong>
+                    <%= user.login.username %>
+                </p>
+                <p><strong>Password:</strong>
+                    <%= user.login.password %>
+                </p>
+            </div>
+
+            <div class="button-container">
+                <a href="/games" class="profile-button">Go to Games</a>
+                <a href="/gallery" class="profile-button">Go to Gallery</a>
+                <a href="/logout" class="profile-button">Logout</a>
+                <a href="/interestevents" class="profile-button">Interested Events</a>
+            </div>
+        </div>
+
+        <!-- password change form-->
+        <div class="profile-container">
+            <h2>Change Password</h2>
+          
+            <form action="/passwordChange" method="POST">
+                <label>Enter current password:</label>
+                <input type="password" placeholder="Current Password" name="currentPassword" required><br>
+                <label>Enter new password:</label>
+                <input type="password" placeholder="New Password" name="newPassword" required><br>
+                <label>Re-enter new password:</label>
+                <input type="password" placeholder="Confirm New Password" name="confirmPassword" required><br>
+                <button type="submit" class="profile-button">Update Password</button>
+            </form>
+          </div>
+
+          <!-- Interested Events Section -->
+        <div id="interested-events-section" class="profile-container" style="display: none;">
+            <h2>Your Interested Events</h2>
+            <div id="interested-events-list"></div>
+        </div>
+        
+          
+
+    </main>
+
+    <div class="footer-container">
+        <footer class="wrapper">
+            <%- include('../partials/footer')%>
+        </footer>
+    </div>
+    
+</body>
+
+</html>

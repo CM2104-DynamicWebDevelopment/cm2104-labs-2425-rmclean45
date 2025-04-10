@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head')%>
+</head>
+<body id="grownups-page">
+
+    <div class="header-container">
+        <header class="wrapper clearfix">
+            <h1 class="title">LUNA GROWNUPS</h1>
+            <%- include('../partials/header')%>
+        </header>
+    </div>
+
+    <div class="main-container">
+        <div class="main wrapper clearfix">
+
+            <article class = "kidsWebsite">
+                <header class = "container, sections">
+                    <h1>Greetings Guardians!</h1>
+                    <p>Here are some further resources to help your child learn more about space...</p>
+                </header>
+                <br>
+                <section>
+                    <h2>ESA Space for Kids</h2>
+                    <iframe class="frame" src="https://www.esa.int/kids/en/home" title="ESA Space for Kids"></iframe>
+                </section>
+                <br>
+                <section>
+                    <h2>Passport to Space</h2>
+                    <iframe class="frame" src="https://kids.nationalgeographic.com/space/"  title="Passport to Space"></iframe>
+                </section>
+            </article>
+            <br>
+            <article class="container, sections">
+                <header>
+                    <h1>Here are some additional resources! Feel free to check them out!</h1>
+                </header>
+                <section>
+                    <a href="https://spaceplace.nasa.gov/">
+                        <img src="Photos/NASASpacePlace.png" alt="NASA" style="width:200px;height:200px;">
+                    </a>
+                    <a href="https://www.bbc.co.uk/bitesize/topics/zkbbkqt/">
+                        <img src="Photos/bbcbitesize.jpeg" alt="BBC" style="width:200px;height:200px;">
+                    </a>
+                    <a href="https://www.planetary.org/kids">
+                        <img src="Photos/planetarysociety.png" alt="Planetary Society" style="width:200px;height:200px;">
+                    </a>
+                </section>
+            </article>
+
+        </div> 
+    </div>
+
+    <br>
+
+    <div class="footer-container">
+        <footer class="wrapper">
+            <%- include('../partials/footer')%>
+        </footer>
+    </div>
+
+
+    <script src="js/main.js"></script>
+</body>
+</html>

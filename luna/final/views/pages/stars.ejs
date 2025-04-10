@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head')%>
+
+    <script src="js/Stars.js" defer></script>
+</head>
+
+<body>
+    <div class="header-container">
+        <header class="wrapper clearfix">
+            <h1 class="title">LUNA STARS</h1>
+            <%- include('../partials/header')%>
+        </header>
+    </div>
+
+    <br>
+
+    <div id="StarInformation">
+        <h1>Star Information</h1>
+
+        <!-- Dropdown to select star -->
+        <label>PICK A STAR:
+            <select style="color:black" id="starSelect" onchange="getStarInfo()" label="select">
+                <option value="">Select a star</option>
+                <option value="Vega">Vega</option>
+                <option value="Betelgeuse">Betelgeuse</option>
+                <option value="Rigel">Rigel</option>
+                <option value="Procyon">Procyon</option>
+                <option value="Antares">Antares</option>
+                <option value="Sirius">Sirius</option>
+                <option value="Polaris">Polaris</option>
+            </select>
+        </label>
+
+        <!-- Container to display image and text -->
+        <div id="infoContainer" class="star-info-container">
+            <img id="starImage" src="" alt="Result Star">
+            <div class="star-info">
+                <pre id="result"></pre>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div id="StarInformation">
+      <h2> Fun Facts!</h2>
+      <h3 class="funFacts">The sun is a star</h3>
+      <p>A star is a luminous ball of gas, mostly made of hydrogen and helium, held together by it's own gravity- that means our sun is a star!</p>
+      <h3 class="funFacts">Stars live for millions of years</h3>
+      <p>By astronomical standards, a star that was formed 2 million years ago is considered to still be in its youth. It takes so long for a star to die that astronomers have not yet observed a fully dead star.</p>
+      <h3 class="funFacts">Most of the stars in the universe are red dwarfs</h3>
+      <p>Smaller stars are called dwarf stars. Red and yellow stars are generally called dwarfs. A brown dwarf is one that never quite got large enough for nuclear fusion to occur. A white dwarf is the remnants of the collapse of a red giant star.</p>
+      <h3 class="funFacts">The nearest star to Earth is Proxima Centauri</h3> 
+      <p>It is 4.2 light-years away, meaning you would have to travel at the speed of light for 4.2 years to get there.</p>
+      <h3 class="funFacts">A neutron star is created from the collapse of a giant star</h3>
+      <p>It's very tiny, but very dense. The smaller a star is the longer they live. Giant stars are bright, but tend to burn out fast.</p>
+      <h3 class="funFacts">When stars die, they collapse</h3>
+      <p>Eventually the core of the star will start to make iron. This will cause the star to collapse. What happens to the star next depends on how much mass it had (how big it was). The average star will become a white dwarf star. Larger stars will create a huge nuclear explosion called a supernova. After the supernova it may become a black hole or a neutron star.</p>
+      <h3 class="funFacts">Stars release energy</h3>
+      <p>Nuclear fusion is the process by which two light atomic nuclei combine to form a single heavier one while releasing massive amounts of energy. Fusion reactions take place in a state of matter called plasma — a hot, charged gas made of positive ions and free-moving electrons with unique properties distinct from solids, liquids or gases. The sun, along with all other stars, is powered by this reaction.</p>
+    </div>
+
+    <br>
+    <br>
+
+    <div class="footer-container">
+        <footer class="wrapper">
+            <%- include('../partials/footer')%>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
+
+
+

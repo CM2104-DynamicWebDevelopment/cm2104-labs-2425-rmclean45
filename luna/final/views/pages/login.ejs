@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<header>
+  <%- include('../partials/head')%>
+</header>
+
+<body>
+    <div class="header-container">
+      <header class="wrapper clearfix">
+          <h1 class="title">LUNA LOGIN</h1>
+          <%- include('../partials/header')%>
+      </header>
+    </div>
+
+  <main>
+    <br> 
+    
+    <div class="jumbotron, container, sections">
+
+      <h2>Login to Access Games, The Gallery and So Much More!</h2>
+      <!-- simple login form, submits to our /dologin route -->
+      <form action="/dologin" method="POST">
+        <label>Enter username:
+          <input type="text" placeholder="username" name="username">
+        </label>
+        <label>Enter password:
+          <input type="password" placeholder="password" name="password">
+        </label>
+        <br>
+        <button type="submit" class="profile-button">Submit</button>
+      </form>
+
+      <br>
+ 
+      <h3>Don't Have An Account? Create one!</h3>
+
+      <form action="/adduser" method="POST">
+        <label>Create a username:
+          <input type="text" placeholder="Username" name="username" required>
+        </label>
+        <label>Create a password:
+          <input type="password" placeholder="Password" name="password" required><br>
+        </label>
+        <label>Enter your email address:
+          <input type="email" placeholder="Email" name="email" required>
+        </label>
+        <br>
+        <button type="submit" class="profile-button">Create Account</button>
+      </form>
+
+
+    </div>
+  </main>
+
+  <div class="footer-container">
+    <footer class="wrapper">
+        <%- include('../partials/footer')%>
+    </footer>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const interestedButtons = document.querySelectorAll('.interested-btn');
+
+    interestedButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const eventId = button.getAttribute('data-event-id');
+            const eventTitle = button.closest('.event').querySelector('.title').textContent;
+            const eventDescription = button.closest('.event').querySelector('.description').textContent;
+
+            // Save to LocalStorage (or send to server)
+            let interestedEvents = JSON.parse(localStorage.getItem('interestedEvents')) || [];
+            interestedEvents.push({
+                id: eventId,
+                title: eventTitle,
+                description: eventDescription,
+            });
+
+            localStorage.setItem('interestedEvents', JSON.stringify(interestedEvents));
+
+            // Optionally update the UI or show a message
+            alert('Event added to your interested list!');
+        });
+    });
+});
+
+</script>
+
+</body>
+
+</html>
