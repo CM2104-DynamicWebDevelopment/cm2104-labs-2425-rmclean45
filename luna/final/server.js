@@ -104,6 +104,7 @@ app.get('/logout', (req, res) => {
     if (err) {
       console.log("Logout error:", err);
     }
+    console.log("session destroyed, redirecting to login")
     res.redirect('/login');
   });
 });
