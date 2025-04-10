@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <%- include('../partials/head') %>
+        <script src="js/main.js"></script>
+    </head>
+
+    <body>
+        <div class="header-container">
+            <header class="wrapper clearfix">
+                <h1 class="title">LUNA GALLERY</h1>
+                <%- include('../partials/header') %>
+            </header>
+        </div>
+
+        <div id="interested-events-list">
+            <!-- The interested events will be dynamically added here -->
+        </div>
+        
+        <br>
+
+        <div class="footer-container">
+            <footer class="wrapper">
+                <%- include('../partials/footer') %>
+            </footer>
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+            // Function to render the interested events
+            const interestedEvents = JSON.parse(localStorage.getItem('interestedEvents')) || [];
+            const eventsListContainer = document.getElementById('interested-events-list');
+
+            if (interestedEvents.length === 0) {
+                eventsListContainer.innerHTML = '<p>No interested events yet.</p>';
+            } else {
+                interestedEvents.forEach(event => {
+                    const eventElement = document.createElement('div');
+                    eventElement.classList.add('event');
+                    eventElement.innerHTML = `
+                        <div class="right">
+                            <h3 class="title">${event.title}</h3>
+                            <div class="description">${event.description}</div>
+                            <button class="delete-btn" data-event-id="${event.id}">Delete</button>
+                        </div>
+                    `;
+                    eventsListContainer.appendChild(eventElement);
+                });
+            }
+
+            // Add event listeners to "Interested" buttons
+            const interestedButtons = document.querySelectorAll('.interested-btn');
+
+            interestedButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    // Get the event ID from the button's data attribute
+                    const eventId = button.getAttribute('data-event-id');
+
+                    // Get the title and description
+                    const eventTitle = button.closest('.event').querySelector('.title').textContent;
+                    const eventDescription = button.closest('.event').querySelector('.description').textContent;
+
+                    // Check if the user is logged in
+                    if (!localStorage.getItem('currentUser')) {
+                        alert('Please log in to add events to your interested list.');
+                        window.location.href = '/login'; // Redirect to the login page
+                        return;
+                    }
+
+                    // Check if the event is already in the interested events list
+                    let interestedEvents = JSON.parse(localStorage.getItem('interestedEvents')) || [];
+
+                    // Check if the event with the same ID already exists in the list
+                    const eventExists = interestedEvents.some(event => event.id === eventId);
+
+                    if (eventExists) {
+                        alert('You have already shown interest in this event.');
+                        return; // Stop further processing
+                    }
+
+                    // Add the event to the list if it doesn't exist already
+                    interestedEvents.push({
+                        id: eventId,
+                        title: eventTitle,
+                        description: eventDescription,
+                    });
+
+                    // Save to LocalStorage
+                    localStorage.setItem('interestedEvents', JSON.stringify(interestedEvents));
+
+                    alert('Event added to your interested list!');
+                });
+            });
+
+            // Add event listeners to "Delete" buttons
+            const deleteButtons = document.querySelectorAll('.delete-btn');
+            deleteButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const eventId = button.getAttribute('data-event-id');
+                    let interestedEvents = JSON.parse(localStorage.getItem('interestedEvents')) || [];
+
+                    // Remove the event from the list
+                    interestedEvents = interestedEvents.filter(event => event.id !== eventId);
+
+                    // Save the updated list to LocalStorage
+                    localStorage.setItem('interestedEvents', JSON.stringify(interestedEvents));
+
+                    // Remove the event element from the DOM
+                    button.closest('.event').remove();
+
+                    alert('Event removed from your interested list!');
+                });
+            });
+        });
+
+        </script>
+    </body>
+</html>

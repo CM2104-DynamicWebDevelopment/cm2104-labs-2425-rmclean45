@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head')%>
+
+    <script src="js/planets.js" defer></script>
+</head>
+
+<body>
+    <div class="header-container">
+        <header class="wrapper clearfix">
+            <h1 class="title">LUNA PLANETS</h1>
+            <%- include('../partials/header')%>
+        </header>
+    </div>
+
+    <br>
+
+    <div id="planetInformation">
+        <h1>Planet Information</h1>
+
+        <!-- Dropdown to select planet -->
+        <label>PICK A PLANET:
+            <select style="color:black" id="planetSelect" onchange="getPlanetInfo()" label="select">
+                <option value="">Select a planet</option>
+                <option value="Mercury">Mercury</option>
+                <option value="Venus">Venus</option>
+                <option value="Earth">Earth</option>
+                <option value="Mars">Mars</option>
+                <option value="Jupiter">Jupiter</option>
+                <option value="Saturn">Saturn</option>
+                <option value="Uranus">Uranus</option>
+                <option value="Neptune">Neptune</option>
+                <option value="Pluto">Pluto</option>
+            </select>
+        </label>
+
+        <!-- Container to display image and text -->
+        <div id="infoContainer" class="planet-info-container">
+            <img id="planetImage" src="" alt="Result Planet" style="display: none;"> <!-- Initially hide the image -->
+            <div class="planet-info">
+                <pre id="result"></pre>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div id="planetInformation">
+      <h2> Fun Facts!</h2>
+      <h3 class="funFacts">You can't stand on Uranus</h3>
+      <p>That’s because Jupiter, Saturn, Uranus and Neptune don’t have solid surfaces - they have a rocky core, but are mainly big balls of hydrogen and helium.</p>
+      <h3 class="funFacts">The whole of Mars is as cold as the South Pole</h3>
+      <p>Its average temperature is roughly -60°C, the same as the South Pole (minus the penguins). Some scientists, in the hopes of making it more habitable, have suggested ways in which we could make Mars warmer. One of these ideas is to build giant mirrors that will reflect the Sun's rays, and kick-start some speedy Martian warming.</p>
+      <h3 class="funFacts">Saturn's rings are 90% water</h3>
+      <p>Saturn is home to the Solar System’s most epic ice rink. Being so far from the Sun, the water in its rings is frozen into ice. It is one of four planets that have rings around them - the other gas planets do too. However, the rest were undiscovered until the 1970s when probes went to explore them. Saturn’s were the first rings seen through telescopes from Earth.</p>
+      <h3 class="funFacts">Mercury takes roughly three Earth months to orbit the Sun</h3> 
+      <p>It’s the shortest orbit in the Solar System, because Mercury is the closest planet to the Sun.</p>
+      <h3 class="funFacts">It would take 100 times longer to travel around the Sun than the Earth</h3>
+      <p>To go on this trip of a lifetime, you’d have to prepare yourself for a journey of 206 days. Let’s hope there are places to stop to refuel along the way.</p>
+      <h3 class="funFacts">A day is longer than a year on Venus</h3>
+      <p>A day is how long it takes a planet to rotate fully, and a year is how long it takes a planet to orbit the Sun. Venus is one of only two planets that rotates clockwise, and it spins much slower than others in the solar system. Some think this is due to it being knocked into a different direction by another planet, or it just gradually slowed to a halt then started turning the other way. It takes 243 Earth days for Venus to do one complete rotation, and 225 Earth days to orbit the Sun. Therefore, a day is longer than a year on Venus.</p>
+      <h3 class="funFacts">Pluto isn’t the only dwarf planet in our Solar System - we have six</h3>
+      <p>The first time you may have heard the term ‘dwarf planet’ was when Pluto got demoted to one in 2006 (RIP). However, we actually have six in our Solar System. Pluto, Ceres, Makemake, Haumea, and Eris were the only five that we knew about up until very recently.</p>
+      <h3 class="funFacts">The Solar System is roughly 4.5 billion years old</h3>
+      <p>The Solar System is ancient. To put it into perspective, if the age of the Solar System were a year, humans would appear on Earth just before the countdown on New Year’s Eve.</p>
+    </div>
+
+    <br>
+
+    <div class="footer-container">
+        <footer class="wrapper">
+            <%- include('../partials/footer')%>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

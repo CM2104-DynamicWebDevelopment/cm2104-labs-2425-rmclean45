@@ -1,0 +1,14 @@
+<nav>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/stars">Stars</a></li>
+        <li><a href="/planets">Planets</a></li>
+        <li><a href="/grownups">Grownups</a></li>
+        <% if (session && session.loggedin) { %>
+            <li><a href="/profile">Profile</a></li>
+            <li><a href="/logout">Logout</a></li>
+        <% } else { %>
+            <li><a href="/login">Login</a></li>
+        <% } %>
+    </ul>
+</nav>

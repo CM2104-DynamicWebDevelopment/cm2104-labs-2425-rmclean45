@@ -1,0 +1,104 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <%-include('partials/head.ejs') %>
+    </head>
+    <body>
+<!--[if lt IE 8]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+<!--==========================================Start of Code======================================================================-->
+
+        <!-- Navigation -->
+        <%- include('partials/nav.ejs') %>
+
+
+
+
+
+
+        <!-- -----------------Main----------------- -->
+
+        <!-- make space for when acount stuff done -->
+        <br><br><br><br><br>
+        <br><br><br><br><br>
+        <br><br><br><br><br>
+        <br><br><br><br><br>
+
+
+
+        <p class="goals-title"><b> My Goals </b></p>
+
+        <div class="goals-section">
+            <div class="goals-module">
+                <div class="cal-circle"> 
+                    <p> 00000</p>
+                    <p class="red-text"> kcal</p>
+                </div>
+            </div>
+            <div class="goals-module">
+                <div class="goals-header">Macros</div>
+                
+                <p class="goals-macro-text">Protein: 23.5g</p>
+                <p class="goals-macro-text">Saturated Fat: 3.4g</p>
+                <p class="goals-macro-text">Fiber: 6g</p>
+                <p class="goals-macro-text">Sodium: 123mg</p>
+                
+            </div>
+            <div class="goals-module">
+                <img class="weight-image" src="weight-scale.png">  <!-- ref: https://www.flaticon.com/free-icon/weight-scale_3213786?term=weight&page=1&position=7&origin=search&related_id=3213786 -->
+                <p class="weight-text">65Kg</p>
+            </div>
+        </div>
+
+
+
+        <p class="goals-title"><b> Current </b></p>
+
+        <div class="goals-section">
+            <div class="goals-module">
+                <div class="cal-circle"> 
+                    <p> 00000</p>
+                    <p class="red-text"> kcal</p>
+                </div>
+            </div>
+            <div class="goals-module">
+                <div class="goals-header">Macros</div>
+                
+                <p class="goals-macro-text">Protein: 23.5g</p>
+                <p class="goals-macro-text">Saturated Fat: 3.4g</p>
+                <p class="goals-macro-text">Fiber: 6g</p>
+                <p class="goals-macro-text">Sodium: 123mg</p>
+    
+            </div>
+            <div class="goals-module">
+                <img class="weight-image" src="weight-scale.png">  
+                <p class="weight-text">65Kg</p>
+                <p class="red-text">__/__/__</p>
+                <button class="weight-update">Update</button>
+            </div>
+        </div>
+    
+
+
+
+        <!--==========================================End of Code======================================================================-->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+        </script>
+    </body>
+</html>

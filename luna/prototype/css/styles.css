@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px; 
+    text-align: left; 
+}
+
+h1 {
+    text-align: left; 
+}
+
+#planetImage { /*Styles the planet Images */
+    display: block; 
+    width: 300px;
+    margin-top: 20px;
+}
+
+#infoContainer { /*Styles Result and Image */
+    display: flex; 
+    align-items: center; 
+    margin-top: 20px; 
+}
+
+#result { /*Styles the result from chosen planet */
+    font-size: 18px; 
+    text-align: left; 
+    white-space: pre-wrap;
+    margin: 0;
+    margin-left: 50px;
+}
+
+
+#solarSystem { /*Styles SolarSystem Image */
+    display: block; 
+    width: 600px; 
+    height: auto; 
+    margin-top: 20px; 
+}
+
+#starImage{ /*styles star images*/
+    display: block; 
+    width: 300px;
+    height: 150px;
+    margin-top: 20px;
+}
+
+
+#apod-image{ /*styles NasaApi images*/
+    max-width: 100%;
+    height: auto;
+    border: 5px solid #fff;
+}

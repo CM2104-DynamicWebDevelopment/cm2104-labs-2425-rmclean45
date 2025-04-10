@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <%- include('../partials/head') %>
+        <script src="js/main.js"></script>
+    </head>
+
+    <body>
+        <div class="header-container">
+            <header class="wrapper clearfix">
+                <h1 class="title">LUNA GALLERY</h1>
+                <%- include('../partials/header') %>
+            </header>
+        </div>
+
+        <h3>Here are your saved NASA images!</h3>
+
+        <div class="gallery-container">
+            <% if (gallery && gallery.length > 0) { %>
+                <% gallery.forEach(image => { %>
+                    <div class="gallery-item">
+                        <% if (image.imageUrl.match(/\.(jpeg|jpg|gif|png)$/)) { %>
+                            <img src="<%= image.imageUrl %>" alt="<%= image.title %>" style="max-width: 100%; height: auto;">
+                        <% } else if (image.imageUrl.match(/\.(mp4|webm|ogg)$/) || image.imageUrl.includes('youtube.com') || image.imageUrl.includes('vimeo.com')) { %>
+                            <iframe src="<%= image.imageUrl %>" width="100%" height="500" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <% } %>
+                        <h4><%= image.title %></h4>
+                        <p><%= image.description %></p>
+                        <form action="/deleteimage" method="POST" style="display: inline;">
+                            <input type="hidden" name="imageUrl" value="<%= image.imageUrl %>">
+                            <button type="submit" class="delete-button">Delete</button>
+                        </form>
+                    </div>
+                <% }) %>
+            <% } else { %>
+                <p>No images or videos saved in your gallery yet.</p>
+            <% } %>
+        </div>
+        
+        
+
+        <br>
+
+        <div class="footer-container">
+            <footer class="wrapper">
+                <%- include('../partials/footer') %>
+            </footer>
+        </div>
+    </body>
+</html>
