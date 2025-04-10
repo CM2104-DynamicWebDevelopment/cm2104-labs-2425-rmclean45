@@ -318,7 +318,7 @@ function isAuthenticated(req, res, next) {
 app.post('/addInterestedEvent', isAuthenticated, (req, res) => {
   const { eventId, eventTitle, eventDescription } = req.body;
 
-  console.log(req.session.loggedin);
+  console.log("is the user logged in: " + req.session.loggedin);
   // Save the event to the database or session
   if (!req.session.loggedin) {
     res.redirect('/login');
